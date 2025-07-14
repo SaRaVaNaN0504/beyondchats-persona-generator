@@ -65,8 +65,9 @@ To use the original script, run `main.py` with the `--url` argument:
 python main.py --url https://www.reddit.com/user/kojied/
 ```
 This will generate a `<username>_persona.txt` file in the project directory.
+
+### OUTPUT
+
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/299a5aeb-83ac-4075-bebb-547225f155a6" />
+
 ```
-
-### OUTPUT 
-<img width="1919" height="795" alt="image" src="https://github.com/user-attachments/assets/299a5aeb-83ac-4075-bebb-547225f155a6" />
-
