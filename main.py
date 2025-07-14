@@ -6,7 +6,6 @@ import re
 from urllib.parse import urlparse
 import sys
 
-# --- CONFIGURATION & INITIALIZATION ---
 
 def load_config():
     """Loads API credentials from config.ini"""
@@ -39,10 +38,8 @@ def extract_username_from_url(url):
         # Expected path format: /user/username/
         parts = path.strip('/').split('/')
         
-        # CORRECTED LOGIC:
-        # Check if the path starts with 'user' and has a username part after it.
         if len(parts) >= 2 and parts[0] == 'user':
-            return parts[1]  # Return the username, which is the second part
+            return parts[1]  
             
         return None # Return None if the URL format isn't what we expect
     except Exception:
@@ -78,13 +75,13 @@ def scrape_redditor_data(reddit, username, limit=100):
 
     return "\n".join(activity_data), username
 
-# --- PERSONA GENERATION WITH LLM ---
+# LLM 
 
 def generate_persona(api_key, user_activity, username):
     """Uses the Google Gemini API to generate a user persona."""
     print("Sending data to the LLM for analysis...")
     genai.configure(api_key=api_key)
-    # NEW, CORRECTED LINE
+    
     model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
     prompt = f"""
@@ -125,7 +122,7 @@ def generate_persona(api_key, user_activity, username):
     except Exception as e:
         return f"An error occurred with the AI model: {e}"
 
-# --- MAIN SCRIPT EXECUTION ---
+# MAIN SCRIPT
 
 def main():
     """Main function to run the script."""

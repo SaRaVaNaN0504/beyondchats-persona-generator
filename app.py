@@ -5,7 +5,7 @@ import configparser
 from urllib.parse import urlparse
 import sys
 
-# --- UI Styling Function ---
+# UI 
 def set_page_style():
     """Injects custom CSS for a beautiful UI."""
     st.markdown(
@@ -29,7 +29,7 @@ def set_page_style():
         unsafe_allow_html=True
     )
 
-# --- Page Config & Style Application ---
+
 st.set_page_config(
     page_title="AI Reddit Persona Generator",
     page_icon="🤖",
@@ -37,7 +37,7 @@ st.set_page_config(
 )
 set_page_style()
 
-# --- BACKEND FUNCTIONS ---
+
 
 def load_config():
     try:
@@ -96,13 +96,13 @@ def scrape_redditor_data(reddit, username, limit=50):
         return None, f"No public activity could be retrieved for user '{username}'. The user may have no posts/comments, or their activity may be restricted from the API."
     return "\n".join(activity_data), None
 
-# --- THIS IS THE CORRECTED FUNCTION ---
+
 def generate_persona(api_key, user_activity, username):
     """Uses the Google Gemini API to generate a user persona."""
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
-    # THE FULL, COMPLETE PROMPT IS RESTORED HERE
+    
     prompt = f"""
     You are a highly skilled user profiler. Your task is to create a detailed user persona based on the following collection of Reddit posts and comments from the user '{username}'.
     Analyze the text provided and construct a persona that includes the sections outlined below.
@@ -141,7 +141,7 @@ def generate_persona(api_key, user_activity, username):
     except Exception as e:
         return f"An error occurred with the AI model: {e}"
 
-# --- STREAMLIT UI ---
+
 
 col1, col2 = st.columns([1, 10])
 with col1:
