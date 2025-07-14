@@ -1,8 +1,8 @@
 # AI Reddit Persona Generator
 
-This project, completed for the BeyondChats AI/LLM Engineer Intern assignment, is a web application that generates a detailed user persona from a Reddit profile URL using AI.
+This project, is a web application that generates a detailed user persona from a Reddit profile URL using AI.
 
-**Live Demo:** [Link to your live Streamlit App URL]
+**Live Demo:** [https://beyondchats-persona-generator-5aivb7xzapefyredk4wwdh.streamlit.app/]
 
 ## Features
 
