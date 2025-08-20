@@ -64,7 +64,7 @@ To use the original script, run `main.py` with the `--url` argument:
 ```bash
 python main.py --url https://www.reddit.com/user/kojied/
 ```
-This will generate a `<username>_persona.txt` file in the project directory.
+This will generate a `SaRaVaNaN0504_persona.txt` file in the project directory.
 
 ### OUTPUT
 
