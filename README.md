@@ -6,6 +6,7 @@ This project, is a web application that generates a detailed user persona from a
 
 ## Features
 
+
 -   Scrapes recent user activity (posts & comments) using the Reddit API.
 -   Handles difficult-to-scrape profiles by trying multiple methods.
 -   Uses Google's Gemini LLM to analyze text and infer characteristics.
@@ -57,6 +58,7 @@ To run the user-friendly web interface, use the following command:
 streamlit run app.py
 ```
 
+
 ### 2. Command-Line Script
 
 To use the original script, run `main.py` with the `--url` argument:
@@ -68,6 +70,8 @@ This will generate a `SaRaVaNaN0504_persona.txt` file in the project directory.
 
 ### OUTPUT
 
+
 <img width="100%" alt="image" src="https://github.com/user-attachments/assets/299a5aeb-83ac-4075-bebb-547225f155a6" />
+
 
 ```
